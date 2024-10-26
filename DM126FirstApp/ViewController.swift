@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     }
     
     func configurarLayout() {
+        btnIniciar.clipsToBounds = true
         btnIniciar.layer.cornerRadius = 20.0
     }
 

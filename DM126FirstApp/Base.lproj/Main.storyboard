@@ -23,7 +23,7 @@
                                     <constraint firstAttribute="height" constant="150" id="GF7-kE-O9l"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Como esta seu humor hoje?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s6m-TP-cVP">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Como está seu humor hoje?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s6m-TP-cVP">
                                 <rect key="frame" x="32" y="413" width="329" height="28.666666666666686"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -76,7 +76,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo da pergunta" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9qN-gu-um2">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo da pergunta" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9qN-gu-um2">
                                 <rect key="frame" x="32" y="203" width="329" height="31.333333333333343"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -163,11 +163,67 @@
                     <connections>
                         <outlet property="lblTituloPergunta" destination="9qN-gu-um2" id="UvZ-yL-5TE"/>
                         <outletCollection property="btnRespostas" destination="ckY-2g-0FR" collectionClass="NSMutableArray" id="6Qu-0a-6VY"/>
+                        <outletCollection property="btnRespostas" destination="1aV-rI-uxd" collectionClass="NSMutableArray" id="CI5-c9-g1g"/>
+                        <outletCollection property="btnRespostas" destination="FhY-EG-ZYf" collectionClass="NSMutableArray" id="PFa-Q6-2xG"/>
+                        <outletCollection property="btnRespostas" destination="Zjl-xC-odP" collectionClass="NSMutableArray" id="2Nr-Bz-6jF"/>
+                        <segue destination="vs9-ng-Obp" kind="show" identifier="irParaTelaResultado" id="LoH-ng-bm7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gaP-2d-UyE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1732" y="5"/>
+        </scene>
+        <!--Resultado View Controller-->
+        <scene sceneID="tdm-Vs-LL5">
+            <objects>
+                <viewController id="vs9-ng-Obp" customClass="ResultadoViewController" customModule="DM126FirstApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e4q-ON-bPv">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Radiante" translatesAutoresizingMaskIntoConstraints="NO" id="0Bp-CB-CU0">
+                                <rect key="frame" x="156.66666666666666" y="183" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="LeE-x9-VLi"/>
+                                    <constraint firstAttribute="height" constant="80" id="P4a-BM-rCX"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo da mensagem" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sjb-Og-7k4">
+                                <rect key="frame" x="32" y="343" width="329" height="31.333333333333314"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mensagem" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ea-58-Yef">
+                                <rect key="frame" x="32" y="424.33333333333331" width="329" height="28.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="n1U-Ah-0te"/>
+                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                        <constraints>
+                            <constraint firstItem="n1U-Ah-0te" firstAttribute="trailing" secondItem="Sjb-Og-7k4" secondAttribute="trailing" constant="32" id="SD3-zP-hnv"/>
+                            <constraint firstItem="n1U-Ah-0te" firstAttribute="trailing" secondItem="5Ea-58-Yef" secondAttribute="trailing" constant="32" id="XZp-FW-DBP"/>
+                            <constraint firstItem="Sjb-Og-7k4" firstAttribute="top" secondItem="0Bp-CB-CU0" secondAttribute="bottom" constant="80" id="a2t-D1-lcb"/>
+                            <constraint firstItem="0Bp-CB-CU0" firstAttribute="centerX" secondItem="e4q-ON-bPv" secondAttribute="centerX" id="cAH-DH-s1J"/>
+                            <constraint firstItem="0Bp-CB-CU0" firstAttribute="top" secondItem="n1U-Ah-0te" secondAttribute="top" constant="80" id="efR-Ej-aX8"/>
+                            <constraint firstItem="5Ea-58-Yef" firstAttribute="top" secondItem="Sjb-Og-7k4" secondAttribute="bottom" constant="50" id="lhO-mb-sh3"/>
+                            <constraint firstItem="5Ea-58-Yef" firstAttribute="leading" secondItem="n1U-Ah-0te" secondAttribute="leading" constant="32" id="oBM-Q4-p4Y"/>
+                            <constraint firstItem="Sjb-Og-7k4" firstAttribute="leading" secondItem="n1U-Ah-0te" secondAttribute="leading" constant="32" id="vus-Sd-Bfy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="G4V-d1-DQF"/>
+                    <connections>
+                        <outlet property="ivHumor" destination="0Bp-CB-CU0" id="WhC-rA-kWz"/>
+                        <outlet property="lblMensagem" destination="5Ea-58-Yef" id="8ki-Gf-udl"/>
+                        <outlet property="lblTitulo" destination="Sjb-Og-7k4" id="YXI-56-onf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3uO-dR-0Kv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2514" y="5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bAW-ud-cgv">
@@ -190,6 +246,7 @@
     </scenes>
     <resources>
         <image name="Humor" width="512" height="512"/>
+        <image name="Radiante" width="512" height="512"/>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
